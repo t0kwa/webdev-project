@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirstIOstream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.jpg" style="background: transparent;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+    <header> 
+        <a href="homepage.html"> <img src="WEB DEV .jpg" class="LOGO">  </a>
+    </header>
+    
+        <div class="popup1" id="popup">
+            <div id="popuptext">
+                <p2>Variables! -- Build-A-Var!</p2>
+                <button id="close"> OK </button> 
+            </div>
+            <img src="dino friend.jpg" id="dinofriend">
+        </div>
+   
+    <div class="whitesquare">
+        <img src="images/charPeople.png" id="charpeople">
+        <img src="images/intPeople.png" id="intpeople">
+    </div>
+    <div class="whiterectangle">
+        <div class="hats">
+            <div id="dragHat" class="draggable"><img src="images/hat1.png" draggable="true"></div>
+            <div id="dragHat1" class="draggable"><img src="images/hat2.png" draggable="true"></div>
+            <div id="dragHat2" class="draggable"><img src="images/hatA.png" draggable="true"></div>
+            <div id="dragHat3" class="draggable"><img src="images/hatB.png" draggable="true"></div>
+        </div>
+
+        <div class="hatowners">
+            <img src="images/John.png">
+            <img src="images/James.png">
+            <img src="images/Nick.png">
+            <img src="images/Ken.png">
+        </div>
+
+        
+    </div>
+    <h3 id="congrats"><a href="congrats2.html" id="submit">Submit!</a></h3>
+
+
+<script>
+    document.querySelector("#close").addEventListener
+    ("click", function(){
+      document.querySelector(".popup1").style.display="none";
+    })
+
+    $(document).ready(function(){
+        $('.draggable').draggable({
+            stack: '.draggable'
+        });
+    });
+
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (checkAnswers()) {
+            window.location.href = 'congrats.html';
+        } else {
+            window.location.href = 'wrong.html';
+        }
+    });
+
+    </script>
+</body>
+</html>

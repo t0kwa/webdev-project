@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirstIOstream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.jpg" style="background: transparent;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+    <header> 
+        <a href="lesson3.html"> <img src="WEB DEV .jpg" class="LOGO">  </a>
+    </header>
+
+        <div class="popup1" id="popup">
+            <div id="popuptext">
+                <p2>Operators! -- Order Up! </p2>
+                <button id="close"> OK </button> 
+            </div>
+            <img src="dino friend.jpg" id="dinofriend">
+        </div>
+   
+    <div class="whitesquarel3">
+        <img src="images/lesson3.png" id="grapesandbanana">
+    </div>
+    <div class="whiterectanglel3">
+        <div class="fruits">
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="grapes" class="draggable"><img src="images/grapes.png" draggable="true"></div>
+            <div id="banana" class="draggable"><img src="images/banana.png" draggable="true"></div>
+            <div id="avocado" class="draggable"><img src="images/avocado.png" draggable="true"></div>
+            <div id="avocado2" class="draggable"><img src="images/avocado.png" draggable="true"></div>
+           </div>
+
+        <div class="buckets">
+            <img src="images/plusbucket.png">
+            <img src="images/minusbucket.png">
+        </div>
+
+        
+    </div>
+    <h3 id="congrats"><a href="lessonmenu.html" id="submit">Submit!</a></h3>
+
+
+
+<script>
+    document.querySelector("#close").addEventListener
+    ("click", function(){
+      document.querySelector(".popup1").style.display="none";
+    })
+
+    $(document).ready(function(){
+        $('.draggable').draggable({
+            stack: '.draggable'
+        });
+    });
+    </script>
+</body>
+</html>

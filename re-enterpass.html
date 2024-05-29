@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirstIOstream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.jpg" style="background: transparent;">
+</head>
+<body>
+    <form action="passchanged.html">
+        <img src="WEB DEV .jpg" class="LOGO">
+    </div>
+        <div class="wrapper">
+            <h3>Re-enter password</h3>
+                <div class="input-box">
+                    <input type="password" placeholder="Password">
+                    <j class="fa-regular fa-eye" id = lockicon></j>
+                </div>
+        
+        <a href="newpassword.html" class="cancel" role="button" id="cancel">Cancel </a>        
+        <button type="submit" class="continue">Continue</button>
+        
+
+    </form>
+
+    <script>
+        let lockicon = document.getElementById("lockicon");
+        let password = document.getElementById("password");
+        
+        lockicon.onclick = function()
+        {
+            if(password.type == "password")
+            {
+                password.type = "text";
+                lockicon.src = "fa-regular fa-eye";
+            }else
+            {
+                password.type = "password";
+                lockicon.src = "fa-regular fa-eye-slash";
+            }
+        }
+        </script>
+        
+</body>
+</html>

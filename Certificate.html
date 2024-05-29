@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirstIOstream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.jpg" style="background: transparent;">
+</head>
+<body>
+    <header> 
+        <a href="ResourcesHome.html"> <img src="WEB DEV .jpg" class="LOGO">  </a>
+     </header>
+
+    <nav class="homebutton">
+        <a href="homepage.html"><img src="images/homebutton.png" class ="homebtn"></a>
+    </nav>
+
+    <form id="downloadForm" action="Certificate.pdf" method="get">
+        <div class="wrapper3">         
+            <div class="certificatedeets">
+                <p2 id="certificateword">Certificate</p2>
+                <button type="submit" class="certificatepdf">Certificate.pdf</button>
+                <form action="URL_TO_DOWNLOAD" target="_blank">
+                    <button type="submit" class="download">Download</button>
+                </form>
+                <button type="button" class="cancel">Cancel</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const certificateButton = document.querySelector('.certificatepdf');
+            const cancelButton = document.querySelector('.cancel');
+
+            certificateButton.addEventListener('click', () => {
+                window.location.href = 'URL_TO_CERTIFICATE.pdf'; // Open the certificate in the same tab
+            });
+
+            cancelButton.addEventListener('click', () => {
+                window.location.href = 'homepage.html'; // Redirect to the homepage if the cancel button is clicked
+            });
+        });
+    </script>
+</body>
+</html>

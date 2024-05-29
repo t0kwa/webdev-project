@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirstIOstream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.jpg" style="background: transparent;">
+</head>
+<body>
+
+<div class="text">
+    <h1 style="font-size: 80px;">myfirst&lt;iostream&gt;</h1>
+    <h2 style="font-size: 40.1px;">learning codes made easy</h2>
+</div>
+<header> 
+    <a href="index.html"> <img src="WEB DEV .jpg" class="LOGO">  </a>
+</header>
+        
+<div class="wrapper">
+    <form onsubmit="authenticate(); return false;">
+
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Username or Email" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <i class="fas fa-eye" id="lockicon"></i>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="account.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+        <div class="register-link"></div>
+        <p id="loginMessage"></p>
+        <p>Don't Have an account? <a href="parentaccount.html">Create new Account</a></p>
+    </form>
+</div>
+
+<script>
+    const accounts = [
+    { username: "tokwa", password: "joshua" },
+    { username: "admin", password: "password" },
+    { username: "iostream", password: "first" }
+];
+function authenticate() {
+        const usernameInput = document.getElementById("username").value;
+        const passwordInput = document.getElementById("password").value;
+        let isAuthenticated = false;
+
+        for (let i = 0; i < accounts.length; i++) {
+            const account = accounts[i];
+            if (usernameInput === account.username && passwordInput === account.password) {
+                isAuthenticated = true;
+                break;
+            }
+        }
+
+        if (isAuthenticated) {
+            // Successful authentication
+            document.getElementById("loginMessage").innerText = "Login successful!";
+            // Redirect or perform other actions here
+            window.location.href = "homepage.html";
+        } else {
+            // Failed authentication
+            document.getElementById("loginMessage").innerText = "Invalid username or password. Please try again.";
+        }
+    }
+    
+
+    let lockicon = document.getElementById("lockicon");
+    let password = document.getElementById("password");
+
+    lockicon.onclick = function() {
+        if (password.type === "password") {
+            password.type = "text";
+            lockicon.classList.remove("fa-eye");
+            lockicon.classList.add("fa-eye-slash");
+        } else {
+            password.type = "password";
+            lockicon.classList.remove("fa-eye-slash");
+            lockicon.classList.add("fa-eye");
+        }
+    };
+</script>
+
+</body>
+</html>
